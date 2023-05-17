@@ -1,0 +1,20 @@
+module RegisterBank(
+  input wire clk,
+  input wire [4:0] readPort1, readPort2, writePort,
+  input wire [31:0] dataIn,
+  input wire regWrite,
+  output reg [31:0] dataOut1, dataOut2
+);
+
+  reg [31:0] registers [31:0];  // Declaración de los registros
+
+  always @(posedge clk) begin
+    if (regWrite) begin
+      registers[writePort] <= dataIn;  // Escritura en el registro seleccionado
+    end
+
+    dataOut1 <= registers[readPort1];  // Lectura del primer registro seleccionado
+    dataOut2 <= registers[readPort2];  // Lectura del segundo registro seleccionado
+  end
+
+endmodule

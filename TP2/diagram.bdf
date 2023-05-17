@@ -1,0 +1,237 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(symbol
+	(rect 888 168 1048 280)
+	(text "reg32" (rect 5 0 42 15)(font "Arial" ))
+	(text "PC" (rect 8 96 25 115)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "d[31..0]" (rect 0 0 47 15)(font "Arial" ))
+		(text "d[31..0]" (rect 21 27 68 42)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 17 15)(font "Arial" ))
+		(text "clk" (rect 21 43 38 58)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "nreset" (rect 0 0 41 15)(font "Arial" ))
+		(text "nreset" (rect 21 59 62 74)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ena" (rect 0 0 24 15)(font "Arial" ))
+		(text "ena" (rect 21 75 45 90)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 160 32)
+		(output)
+		(text "qo[31..0]" (rect 0 0 55 15)(font "Arial" ))
+		(text "qo[31..0]" (rect 93 27 148 42)(font "Arial" ))
+		(line (pt 160 32)(pt 144 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 144 96))
+	)
+)
+(symbol
+	(rect 1160 48 1344 128)
+	(text "rom_prog" (rect 5 0 68 15)(font "Arial" ))
+	(text "program" (rect 8 64 63 79)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "address[7..0]" (rect 0 0 84 15)(font "Arial" ))
+		(text "address[7..0]" (rect 21 27 105 42)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clock" (rect 0 0 33 15)(font "Arial" ))
+		(text "clock" (rect 21 43 54 58)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "q[31..0]" (rect 0 0 47 15)(font "Arial" ))
+		(text "q[31..0]" (rect 124 27 171 42)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 64))
+	)
+)
+(symbol
+	(rect 768 32 1008 144)
+	(text "fetch" (rect 5 0 35 15)(font "Arial" ))
+	(text "IFU" (rect 8 96 30 111)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "readPC[31..0]" (rect 0 0 88 15)(font "Arial" ))
+		(text "readPC[31..0]" (rect 21 27 109 42)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 17 15)(font "Arial" ))
+		(text "clk" (rect 21 43 38 58)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "nreset" (rect 0 0 41 15)(font "Arial" ))
+		(text "nreset" (rect 21 59 62 74)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ena" (rect 0 0 24 15)(font "Arial" ))
+		(text "ena" (rect 21 75 45 90)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "writePC[31..0]" (rect 0 0 89 15)(font "Arial" ))
+		(text "writePC[31..0]" (rect 144 27 233 42)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(port
+		(pt 240 48)
+		(output)
+		(text "memAddress[31..0]" (rect 0 0 127 15)(font "Arial" ))
+		(text "memAddress[31..0]" (rect 112 43 239 58)(font "Arial" ))
+		(line (pt 240 48)(pt 224 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 224 96))
+	)
+)
+(symbol
+	(rect 448 272 672 416)
+	(text "RegisterBank" (rect 5 0 93 15)(font "Arial" ))
+	(text "registers" (rect 8 128 62 147)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 17 15)(font "Arial" ))
+		(text "clk" (rect 21 27 38 42)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "readPort1[4..0]" (rect 0 0 94 15)(font "Arial" ))
+		(text "readPort1[4..0]" (rect 21 43 115 58)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "readPort2[4..0]" (rect 0 0 94 15)(font "Arial" ))
+		(text "readPort2[4..0]" (rect 21 59 115 74)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "writePort[4..0]" (rect 0 0 87 15)(font "Arial" ))
+		(text "writePort[4..0]" (rect 21 75 108 90)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "dataIn[31..0]" (rect 0 0 79 15)(font "Arial" ))
+		(text "dataIn[31..0]" (rect 21 91 100 106)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "regWrite" (rect 0 0 54 15)(font "Arial" ))
+		(text "regWrite" (rect 21 107 75 122)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "dataOut1[31..0]" (rect 0 0 97 15)(font "Arial" ))
+		(text "dataOut1[31..0]" (rect 121 27 218 42)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 3))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "dataOut2[31..0]" (rect 0 0 97 15)(font "Arial" ))
+		(text "dataOut2[31..0]" (rect 121 43 218 58)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 128))
+	)
+)
+(connector
+	(text "PC_read" (rect 1058 176 1109 195)(font "Intel Clear" ))
+	(pt 1048 200)
+	(pt 1128 200)
+	(bus)
+)
+(connector
+	(text "PC_w" (rect 826 176 861 195)(font "Intel Clear" ))
+	(pt 888 200)
+	(pt 816 200)
+	(bus)
+)
+(connector
+	(text "PC_read" (rect 706 40 757 59)(font "Intel Clear" ))
+	(pt 768 64)
+	(pt 696 64)
+	(bus)
+)
+(connector
+	(text "PC_w" (rect 1048 40 1083 59)(font "Intel Clear" ))
+	(pt 1008 64)
+	(pt 1088 64)
+	(bus)
+)
+(connector
+	(pt 1008 80)
+	(pt 1160 80)
+	(bus)
+)
